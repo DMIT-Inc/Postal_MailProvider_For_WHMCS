@@ -135,7 +135,7 @@ class PostalMail implements SenderModuleInterface
 
         // Set the content for the e-mail
         $sendMessage->plainBody($plainTextBody);
-        $sendMessage->htmlBody($body);
+        $sendMessage->htmlBody($body ?? '');
 
         // Set the replyTo
         $sendMessage->replyTo($replyTo);
